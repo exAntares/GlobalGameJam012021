@@ -9,7 +9,7 @@ public class MainShipComponent : MonoBehaviour {
     public const int maxX = 100;
     public const int maxY = 100;
     public readonly Vector3 Offset = new Vector3(Mathf.FloorToInt(maxX * 0.5f), Mathf.FloorToInt(maxY * 0.5f));
-    private Dictionary<int, ShipPieceComponent> _piecesByIndex = new Dictionary<int, ShipPieceComponent>();
+    public Dictionary<int, ShipPieceComponent> PiecesByIndex = new Dictionary<int, ShipPieceComponent>();
     private Transform _lastPiece;
     
     private void Awake() => AddPiece(GetComponentInChildren<ShipPieceComponent>());
@@ -21,11 +21,11 @@ public class MainShipComponent : MonoBehaviour {
     
     public void AddPiece(ShipPieceComponent piece) {
         var pieceTransform = piece.transform;
-        if (_piecesByIndex.Count <= 0) {
+        if (PiecesByIndex.Count <= 0) {
             pieceTransform.SetParent(transform);
             pieceTransform.localPosition = Vector3.zero;
             var index = GetIndex(Vector3.zero);
-            _piecesByIndex[index] = piece;
+            PiecesByIndex[index] = piece;
             piece.OnAttached();
             return;
         }
@@ -36,7 +36,7 @@ public class MainShipComponent : MonoBehaviour {
             var targetPos = GetLocalPos(availableIndex);
             pieceTransform.DOLocalMove(targetPos, 0.5f);
             pieceTransform.DOLocalRotate(Vector3.zero, 0.5f);
-            _piecesByIndex[availableIndex] = piece;
+            PiecesByIndex[availableIndex] = piece;
             _lastPiece = piece.transform;
             piece.OnAttached();
         }
@@ -53,7 +53,7 @@ public class MainShipComponent : MonoBehaviour {
     public Vector3 GetLocalPos(int index) => new Vector3(index % maxX, Mathf.FloorToInt(index / (float) maxX)) - Offset;
 
     public int GetAvailableIndex() {
-        foreach (var piece in _piecesByIndex) {
+        foreach (var piece in PiecesByIndex) {
             var position = GetLocalPos(piece.Key);
             var up = position + Vector3.up;
             if (IsEmpty(up)) {
@@ -81,6 +81,6 @@ public class MainShipComponent : MonoBehaviour {
 
     public bool IsEmpty(Vector3 localPos) {
         var index = GetIndex(localPos);
-        return !_piecesByIndex.TryGetValue(index, out var shipPiece) || shipPiece == null;
+        return !PiecesByIndex.TryGetValue(index, out var shipPiece) || shipPiece == null;
     }
 }

@@ -9,6 +9,7 @@ namespace TurnManagement
     {
         private static TurnManager _turnManager;
         [SerializeField] private ScriptableGameEvent _eventToSendOnTurnEnd;
+        [SerializeField] private GlobalFloat _currentTurnGlobalFloat;
         private IPerformTurnAction _playerActionToPerform;
 
         public UnityEvent<int> OnTurnPassed;
@@ -37,6 +38,7 @@ namespace TurnManagement
         {
             OnTurnPassed.Invoke(++_currentTurn);
             OnTurnPassedAsString.Invoke(_currentTurn.ToString());
+            _currentTurnGlobalFloat.Value = _currentTurn;
             if (_playerActionToPerform != null)
             {
                 _playerActionToPerform.DoTurnAction();
