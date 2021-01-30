@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3094882482423788243}
   - component: {fileID: 3808268697517901984}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 303884bb71c539d4cade7121d611f5b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c40261b5c7573c469b44b3aa2c91aa1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
