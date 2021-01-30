@@ -105,9 +105,18 @@ namespace Ship
 
         private void OnTurnPassed()
         {
+            RefreshText();
+        }
+
+        private void RefreshText()
+        {
             if (_shipPiece.IsAttached)
             {
                 _tooltipSpawner.Text = GetTextForEnemies();
+            }
+            else
+            {
+                _tooltipSpawner.Text = _tooltipTextWhenDetached;
             }
         }
 
@@ -126,12 +135,12 @@ namespace Ship
 
         private void OnDetached()
         {
-            _tooltipSpawner.Text = _tooltipTextWhenDetached;
+            RefreshText();
         }
 
         private void OnAttached()
         {
-            _tooltipSpawner.Text = _tooltipTextWhenAttached;
+            RefreshText();
         }
     }
 }

@@ -30,8 +30,11 @@ public class EnemyComponent : MonoBehaviour {
         var shipPieceComponents = new List<ShipPieceComponent>(mainShip.PiecesByIndex.Values);
         var index = Random.Range(0, shipPieceComponents.Count);
         var target = shipPieceComponents[index].gameObject;
-        Debug.Log($"{name} attacking {target}");
-        DestroyShip(target);
+        if (target != null)
+        {
+            Debug.Log($"{name} attacking {target}");
+            DestroyShip(target);
+        }
     }
 
     public void ReceiveDamage(int damage)
@@ -57,7 +60,10 @@ public class EnemyComponent : MonoBehaviour {
         tweenerCore.SetDelay(Random.Range(0f, 0.5f));
         tweenerCore.OnComplete(() => {
             Destroy(instance);
-            Destroy(target);
+            if (target != null)
+            {
+                Destroy(target);
+            }
         });
     }
 }
