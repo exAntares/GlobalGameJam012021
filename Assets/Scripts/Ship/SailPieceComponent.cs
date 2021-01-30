@@ -35,12 +35,12 @@ namespace Ship
             }
         }
 
-        private void OnEnable()
+        private void Awake()
         {
             AddListeners();
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             RemoveListeners();
         }
