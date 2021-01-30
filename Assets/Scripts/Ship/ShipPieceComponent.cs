@@ -1,7 +1,8 @@
+using TurnManagement;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ShipPieceComponent : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler {
+public class ShipPieceComponent : MonoBehaviour, IPerformTurnAction, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler {
     protected bool IsAttached = false;
     
     private void OnDestroy() {
@@ -10,9 +11,10 @@ public class ShipPieceComponent : MonoBehaviour, IPointerClickHandler, IPointerD
 
     public virtual void OnClicked() {
         Debug.Log($"{name} OnClicked");
-        if (!IsAttached) {
-            var mainShip = FindObjectOfType<MainShipComponent>();
-            mainShip.AddPiece(this);            
+        if (!IsAttached)
+        {
+            var turnManager = TurnManager.Find();
+            turnManager.SetPlayerAction(this);
         }
     }
 
@@ -22,7 +24,7 @@ public class ShipPieceComponent : MonoBehaviour, IPointerClickHandler, IPointerD
     }
 
     public virtual void OnDetached() {
-        Debug.Log($"{name} OnDeattached");
+        Debug.Log($"{name} OnDetached");
         IsAttached = false;
     }
 
@@ -34,5 +36,11 @@ public class ShipPieceComponent : MonoBehaviour, IPointerClickHandler, IPointerD
     }
 
     public void OnPointerUp(PointerEventData eventData) {
+    }
+
+    public void DoTurnAction()
+    {
+        var mainShip = FindObjectOfType<MainShipComponent>();
+        mainShip.AddPiece(this);
     }
 }
