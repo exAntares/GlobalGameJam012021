@@ -66,18 +66,17 @@ namespace Ship
             _shipPiece.OnClickedEvent.AddListener(OnClicked);
         }
 
-        private void OnClicked()
-        {
+        private void OnClicked() {
             var enemies = FindObjectsOfType<EnemyComponent>();
             var enemiesLength = enemies.Length;
-            if (enemiesLength > 0)
-            {
+            if (enemiesLength > 0) {
                 var allCannons = FindObjectsOfType<CannonPieceComponent>();
-                foreach (var cannonPiece in allCannons)
-                {
-                    cannonPiece.ShootAtRandom(enemies);
+                foreach (var cannonPiece in allCannons) {
+                    if (cannonPiece._shipPiece.IsAttached) {
+                        cannonPiece.ShootAtRandom(enemies);
+                    }
                 }
-                
+
                 var turnManager = TurnManager.Find();
                 turnManager.PassTurn();
             }
