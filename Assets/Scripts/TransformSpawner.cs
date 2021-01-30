@@ -21,7 +21,7 @@ public class TransformSpawner : MonoBehaviour {
     }
 
     private void OnDestroy() {
-        _currentTurn.OnTValueChanged += OnTurnChanged;
+        _currentTurn.OnTValueChanged -= OnTurnChanged;
     }
 
     private void OnTurnChanged(float turn) {
