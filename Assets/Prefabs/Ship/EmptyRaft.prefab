@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 5280635042534969153}
   - component: {fileID: 5280635042534969154}
   - component: {fileID: 5280635042534969157}
+  - component: {fileID: 4837456369728163901}
   m_Layer: 0
   m_Name: EmptyRaft
   m_TagString: Untagged
@@ -192,10 +193,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441f8021c861482096fae40eeed3370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAttached: 0
   OnAttachedEvent:
     m_PersistentCalls:
       m_Calls: []
   OnDetachedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClickedEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &5280635042534969157
@@ -213,3 +218,16 @@ MonoBehaviour:
   DirectionPerTurn: {x: 0, y: -1}
   _attachedToShipPiece: {fileID: 5280635042534969154}
   _destroyWhenBelowY: -5
+--- !u!114 &4837456369728163901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280635042534969155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383484e5866249eda82be7546f0fc441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Attach this empty raft to your boat

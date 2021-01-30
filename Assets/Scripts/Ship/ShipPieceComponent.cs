@@ -4,10 +4,11 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class ShipPieceComponent : MonoBehaviour, IPerformTurnAction, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler {
-    protected bool IsAttached = false;
+    public bool IsAttached = false;
 
     public UnityEvent OnAttachedEvent;
     public UnityEvent OnDetachedEvent;
+    public UnityEvent OnClickedEvent;
     
     private void OnDestroy() {
         OnDetached();
@@ -20,6 +21,10 @@ public class ShipPieceComponent : MonoBehaviour, IPerformTurnAction, IPointerCli
             var turnManager = TurnManager.Find();
             turnManager.SetPlayerAction(this);
             turnManager.PassTurn();
+        }
+        else
+        {
+            OnClickedEvent?.Invoke();
         }
     }
 
