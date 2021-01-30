@@ -91,6 +91,7 @@ public class PlayerInputManager : MonoBehaviour
             SpriteRenderer newSpr = GameObject.Instantiate(spr);
             newSpr.color = new Color(1.0f,0f,0f,0.5f);
             newSpr.transform.parent = ghostShipContainer.transform;
+            newSpr.transform.Translate(spr.transform.parent.position);
         }
         
         ghostShipContainer.transform.parent = gameGridGameObject.transform;
