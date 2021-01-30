@@ -43,7 +43,7 @@ public class MainShipComponent : MonoBehaviour {
     }
 
     public void Update() {
-        if (_lastPiece != null) {
+        if (_lastPiece != null && _lastPiece.localPosition != Vector3.zero) {
             ShapeController.spline.SetPosition(ShapeController.spline.GetPointCount()-1, _lastPiece.localPosition);
         }
     }

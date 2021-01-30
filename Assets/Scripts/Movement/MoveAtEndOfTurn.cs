@@ -23,20 +23,11 @@ namespace Movement
             }
         }
 
-        private void Reset()
-        {
-            _attachedToShipPiece = GetComponent<ShipPieceComponent>();
-        }
+        private void Reset() => _attachedToShipPiece = GetComponent<ShipPieceComponent>();
 
-        private void OnDetached()
-        {
-            enabled = true;
-        }
+        private void OnDetached() => enabled = true;
 
-        private void OnAttached()
-        {
-            enabled = false;
-        }
+        private void OnAttached() => enabled = false;
 
         public void DoMovement()
         {
@@ -51,13 +42,10 @@ namespace Movement
             }
             else
             {
-                Destroy(this);
+                Destroy(gameObject);
             }
         }
 
-        public bool IsOutsideScreen()
-        {
-            return transform.position.y < _destroyWhenBelowY;
-        }
+        public bool IsOutsideScreen() => transform.position.y < _destroyWhenBelowY;
     }
 }

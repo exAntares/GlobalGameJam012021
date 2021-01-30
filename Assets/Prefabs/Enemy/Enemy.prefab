@@ -78,7 +78,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.17, y: 4.23}
+  m_Size: {x: 6.47, y: 7.58}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -113,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 8639348926661266651, guid: d0529a032fa644fffb9a67e16ef0a5d0, type: 3}
   _currentTurnGlobalFloat: {fileID: 11400000, guid: 88e87e51df7f44355af1afa93b50d376, type: 2}
+  _turnFrequencyToAttack: 3
