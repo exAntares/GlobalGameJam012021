@@ -19,6 +19,7 @@ public class ShipPieceComponent : MonoBehaviour, IPerformTurnAction, IPointerCli
         {
             var turnManager = TurnManager.Find();
             turnManager.SetPlayerAction(this);
+            turnManager.PassTurn();
         }
     }
 
