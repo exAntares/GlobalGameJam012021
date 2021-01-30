@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyComponent : MonoBehaviour {
     [SerializeField] private GameObject _projectile;
     [SerializeField] private GlobalFloat _currentTurnGlobalFloat;
+    [SerializeField] private int _turnFrequencyToAttack = 3;
 
     void Start() {
         _currentTurnGlobalFloat.OnTValueChanged += OnTurnChanged;
@@ -17,7 +18,7 @@ public class EnemyComponent : MonoBehaviour {
 
     private void OnTurnChanged(float turn) {
         var intTurn = (int)turn;
-        var mod = intTurn % 2;
+        var mod = intTurn % _turnFrequencyToAttack;
         if (mod == 0) {
             AttackPlayer();
         }
@@ -34,6 +35,7 @@ public class EnemyComponent : MonoBehaviour {
 
     private void DestroyShip(GameObject target) {
         var instance = Instantiate(_projectile);
+        instance.transform.position = transform.position;
         var tweenerCore = instance.transform.DOMove(target.transform.position, 0.5f);
         tweenerCore.OnComplete(action: () => {
             Destroy(instance);
