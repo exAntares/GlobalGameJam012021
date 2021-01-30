@@ -203,7 +203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6473048355565150442}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Scenes.SwitchToSceneIndex, Assembly-CSharp
+        m_MethodName: SwitchToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2837644189866685963
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +384,74 @@ MonoBehaviour:
 
 
 '
+--- !u!1 &3065183445762652605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3179357955298789150}
+  - component: {fileID: 7342660940835017693}
+  - component: {fileID: 4727738814656234821}
+  m_Layer: 0
+  m_Name: VisualScripting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3179357955298789150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065183445762652605}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1275.8506, y: 749.4508, z: -6.6087103}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9101518842076218496}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7342660940835017693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065183445762652605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[{"name":"Treasure01","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"treasure02","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Treasure03","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"OwnedTreasures","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Text","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 2728469179763601853}
+    - {fileID: 3820710278362495106}
+    - {fileID: 342834763643616776}
+    - {fileID: 11400000, guid: 852d20839b4bdbd4e8be5762a248f089, type: 2}
+    - {fileID: 5534146267944508743}
+--- !u!114 &4727738814656234821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065183445762652605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 130345ec95b7e1345ae7451948079af6, type: 2}
 --- !u!1 &5562097795687051268
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1324878373908672301}
+  - {fileID: 3179357955298789150}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -857,11 +938,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreasureScoreslot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
 --- !u!224 &6686096366445243425 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1231857942789457869, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+  m_PrefabInstance: {fileID: 5607466958418750444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &342834763643616776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
   m_PrefabInstance: {fileID: 5607466958418750444}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7839992176959480921
@@ -959,8 +1049,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreasureScoreslot
       objectReference: {fileID: 0}
+    - target: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+--- !u!1 &2728469179763601853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+  m_PrefabInstance: {fileID: 7839992176959480921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9067240412769903508 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1231857942789457869, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
@@ -1061,8 +1160,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreasureScoreslot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+--- !u!1 &3820710278362495106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+  m_PrefabInstance: {fileID: 8941233894889434470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7858170706262272683 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1231857942789457869, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
