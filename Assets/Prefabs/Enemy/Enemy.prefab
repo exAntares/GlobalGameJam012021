@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectile: {fileID: 8639348926661266651, guid: d0529a032fa644fffb9a67e16ef0a5d0, type: 3}
+  _hitEffect: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
   _currentTurnGlobalFloat: {fileID: 11400000, guid: 88e87e51df7f44355af1afa93b50d376, type: 2}
   _turnFrequencyToAttack: 1
   _hitPoints: 3

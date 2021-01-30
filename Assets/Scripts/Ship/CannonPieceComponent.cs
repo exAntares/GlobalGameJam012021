@@ -15,6 +15,7 @@ namespace Ship
         [SerializeField] private string _tooltipTextWhenAttached;
         [SerializeField] private ScriptableGameEvent _onTurnPassedEvent;
         [SerializeField] private GameObject _projectile;
+        [SerializeField] private GameObject _hitEffect;
         [SerializeField] private GlobalFloat _globalCannonDamageInt;
         
         private void Reset()
@@ -93,6 +94,9 @@ namespace Ship
             var tween = instance.transform.DOMove(enemy.transform.position, 0.5f);
             tween.SetDelay(Random.Range(0f, 0.5f));
             tween.OnComplete(() => {
+                var hitEffect = Instantiate(_hitEffect);
+                hitEffect.transform.position = instance.transform.position;
+                Destroy(hitEffect, 2.0f);
                 Destroy(instance);
                 if (enemy != null && enemy.enabled)
                 {

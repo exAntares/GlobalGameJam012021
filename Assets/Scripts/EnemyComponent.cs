@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using HalfBlind.ScriptableVariables;
@@ -7,6 +6,7 @@ using UnityEngine;
 
 public class EnemyComponent : MonoBehaviour {
     [SerializeField] private GameObject _projectile;
+    [SerializeField] private GameObject _hitEffect;
     [SerializeField] private GlobalFloat _currentTurnGlobalFloat;
     [SerializeField] private int _turnFrequencyToAttack = 3;
     [SerializeField] private int _hitPoints = 3;
@@ -71,6 +71,9 @@ public class EnemyComponent : MonoBehaviour {
         var tweenerCore = instance.transform.DOMove(target.transform.position, 0.5f);
         tweenerCore.SetDelay(Random.Range(0f, 0.5f));
         tweenerCore.OnComplete(() => {
+            var hitEffect = Instantiate(_hitEffect);
+            hitEffect.transform.position = instance.transform.position;
+            Destroy(hitEffect, 2.0f);
             Destroy(instance);
             if (target != null)
             {
