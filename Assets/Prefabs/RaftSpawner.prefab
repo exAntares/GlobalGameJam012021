@@ -255,6 +255,7 @@ MonoBehaviour:
   - {fileID: 7338743939560180355}
   _currentTurn: {fileID: 11400000, guid: 88e87e51df7f44355af1afa93b50d376, type: 2}
   _everyXTurns: 1
+  _shouldSpawnRotatedRandom: 1
 --- !u!1 &5740299658446956054
 GameObject:
   m_ObjectHideFlags: 0

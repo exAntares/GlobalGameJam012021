@@ -15,6 +15,7 @@ public class TransformSpawner : MonoBehaviour {
     [SerializeField] private Transform[] _spots;
     [SerializeField] private GlobalFloat _currentTurn;
     [SerializeField] private int _everyXTurns = 1;
+    [SerializeField] private bool _shouldSpawnRotatedRandom = false;
     
     private void Awake() {
         _currentTurn.OnTValueChanged += OnTurnChanged;
@@ -41,5 +42,8 @@ public class TransformSpawner : MonoBehaviour {
         var spotIndex = Random.Range(0, _spots.Length);
         var instance = Instantiate(weightedList[indexToSpawn].ToSpawn);
         instance.position = _spots[spotIndex].position;
+        if (_shouldSpawnRotatedRandom) {
+            instance.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-40, 40)));
+        }
     }
 }

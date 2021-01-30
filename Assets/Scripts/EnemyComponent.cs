@@ -29,7 +29,7 @@ public class EnemyComponent : MonoBehaviour {
     
     private void AttackPlayer() {
         var mainShip = FindObjectOfType<MainShipComponent>();
-        var shipPieceComponents = new List<ShipPieceComponent>(mainShip.PiecesByIndex.Values);
+        var shipPieceComponents = mainShip.PiecesByIndex.Values.Where(x => x != null).ToList();
         var targetRaftComponent = shipPieceComponents
             .FirstOrDefault(x => x.GetComponent<TargetRaftComponent>() != null);
         if (targetRaftComponent != null) {
