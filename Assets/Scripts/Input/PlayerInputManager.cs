@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using YamlDotNet.Core.Tokens;
 
 public class PlayerInputManager : MonoBehaviour
 { 
