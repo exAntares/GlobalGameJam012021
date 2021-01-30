@@ -1,9 +1,13 @@
 using TurnManagement;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class ShipPieceComponent : MonoBehaviour, IPerformTurnAction, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler {
     protected bool IsAttached = false;
+
+    public UnityEvent OnAttachedEvent;
+    public UnityEvent OnDetachedEvent;
     
     private void OnDestroy() {
         OnDetached();
@@ -20,11 +24,13 @@ public class ShipPieceComponent : MonoBehaviour, IPerformTurnAction, IPointerCli
 
     public virtual void OnAttached() {
         Debug.Log($"{name} OnAttached");
+        OnAttachedEvent?.Invoke();
         IsAttached = true;
     }
 
     public virtual void OnDetached() {
         Debug.Log($"{name} OnDetached");
+        OnDetachedEvent?.Invoke();
         IsAttached = false;
     }
 

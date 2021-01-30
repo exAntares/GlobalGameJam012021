@@ -1,4 +1,5 @@
 using HalfBlind.ScriptableVariables;
+using Movement;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -40,6 +41,12 @@ namespace TurnManagement
             {
                 _playerActionToPerform.DoTurnAction();
                 _playerActionToPerform = null;
+            }
+
+            var moveAtEndOfTurns = FindObjectsOfType<MoveAtEndOfTurn>();
+            foreach (var moveAtEndOfTurn in moveAtEndOfTurns)
+            {
+                moveAtEndOfTurn.DoMovement();
             }
             _eventToSendOnTurnEnd.SendEvent();
         }
