@@ -15,7 +15,10 @@ MonoBehaviour:
   _shipPiece: {fileID: 6748831000199199832}
   _tooltipSpawner: {fileID: 6323660181739381543}
   _tooltipTextWhenDetached: Tap to add more cannons to your ship
-  _tooltipTextWhenAttached: Tap to shoot an enemy this turn
+  _tooltipTextWhenAttached: No enemies to shoot
+  _onTurnPassedEvent: {fileID: 11400000, guid: c183fe99e6e8b472d8cce0fdd0a78d58, type: 2}
+  _projectile: {fileID: 8639348926661266651, guid: d0529a032fa644fffb9a67e16ef0a5d0, type: 3}
+  _globalCannonDamageInt: {fileID: 11400000, guid: aa66195ace4b6497b87ffe2683f52210, type: 2}
 --- !u!1 &3365755335915471037
 GameObject:
   m_ObjectHideFlags: 0

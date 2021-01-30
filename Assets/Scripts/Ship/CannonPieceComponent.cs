@@ -1,3 +1,5 @@
+using DG.Tweening;
+using HalfBlind.ScriptableVariables;
 using Tooltips;
 using TurnManagement;
 using UnityEngine;
@@ -11,6 +13,9 @@ namespace Ship
         [SerializeField] private TooltipSpawner _tooltipSpawner;
         [SerializeField] private string _tooltipTextWhenDetached;
         [SerializeField] private string _tooltipTextWhenAttached;
+        [SerializeField] private ScriptableGameEvent _onTurnPassedEvent;
+        [SerializeField] private GameObject _projectile;
+        [SerializeField] private GlobalFloat _globalCannonDamageInt;
         
         private void Reset()
         {
@@ -24,7 +29,7 @@ namespace Ship
             {
                 Reset();
             }
-
+            
             if (_shipPiece.IsAttached)
             {
                 OnAttached();
@@ -47,6 +52,7 @@ namespace Ship
 
         private void RemoveListeners()
         {
+            _onTurnPassedEvent.RemoveListener(OnTurnPassed);
             _shipPiece.OnAttachedEvent.RemoveListener(OnAttached);
             _shipPiece.OnDetachedEvent.RemoveListener(OnDetached);
             _shipPiece.OnClickedEvent.RemoveListener(OnClicked);
@@ -54,6 +60,7 @@ namespace Ship
 
         private void AddListeners()
         {
+            _onTurnPassedEvent.AddListener(OnTurnPassed);
             _shipPiece.OnAttachedEvent.AddListener(OnAttached);
             _shipPiece.OnDetachedEvent.AddListener(OnDetached);
             _shipPiece.OnClickedEvent.AddListener(OnClicked);
@@ -61,9 +68,60 @@ namespace Ship
 
         private void OnClicked()
         {
-            var turnManager = TurnManager.Find();
-            // TODO: Select enemy to shoot
-            turnManager.PassTurn();
+            var enemies = FindObjectsOfType<EnemyComponent>();
+            var enemiesLength = enemies.Length;
+            if (enemiesLength > 0)
+            {
+                var allCannons = FindObjectsOfType<CannonPieceComponent>();
+                foreach (var cannonPiece in allCannons)
+                {
+                    cannonPiece.ShootAtRandom(enemies);
+                }
+                
+                var turnManager = TurnManager.Find();
+                turnManager.PassTurn();
+            }
+        }
+
+        private void ShootAtRandom(EnemyComponent[] enemies)
+        {
+            var enemiesLength = enemies.Length;
+            var range = Random.Range(0, enemiesLength);
+            var enemy = enemies[range];
+
+            var instance = Instantiate(_projectile);
+            instance.transform.position = transform.position;
+            var tween = instance.transform.DOMove(enemy.transform.position, 0.5f);
+            tween.SetDelay(Random.Range(0f, 0.5f));
+            tween.OnComplete(() => {
+                Destroy(instance);
+                if (enemy != null && enemy.enabled)
+                {
+                    var damage = (int) Mathf.Max(_globalCannonDamageInt.Value, 1f);
+                    enemy.ReceiveDamage(damage);
+                }
+            });
+        }
+
+        private void OnTurnPassed()
+        {
+            if (_shipPiece.IsAttached)
+            {
+                _tooltipSpawner.Text = GetTextForEnemies();
+            }
+        }
+
+        private string GetTextForEnemies()
+        {
+            var enemies = FindObjectsOfType<EnemyComponent>();
+            var enemiesLength = enemies.Length;
+            if (enemiesLength > 0)
+            {
+                var allCannons = FindObjectsOfType<CannonPieceComponent>();
+                return $"Your {allCannons.Length} cannons will attack {enemiesLength} enemies";
+            }
+
+            return _tooltipTextWhenAttached;
         }
 
         private void OnDetached()
