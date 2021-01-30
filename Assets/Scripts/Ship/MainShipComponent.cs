@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class MainShipComponent : MonoBehaviour {
@@ -27,7 +28,8 @@ public class MainShipComponent : MonoBehaviour {
         var availableIndex = GetAvailableIndex();
         if (availableIndex > 0) {
             piece.transform.SetParent(transform);
-            piece.transform.localPosition = GetLocalPos(availableIndex);
+            piece.transform.DOLocalMove(GetLocalPos(availableIndex), 0.5f);
+            piece.transform.DOLocalRotate(Vector3.zero, 0.5f);
             _piecesByIndex[availableIndex] = piece;
             piece.OnAttached();
         }
@@ -36,8 +38,8 @@ public class MainShipComponent : MonoBehaviour {
     public Vector3 GetLocalPos(int index) => new Vector3(index % maxX, Mathf.FloorToInt(index / (float) maxX)) - Offset;
 
     public int GetAvailableIndex() {
-        foreach (var pieces in _piecesByIndex) {
-            var position = pieces.Value.transform.localPosition;
+        foreach (var piece in _piecesByIndex) {
+            var position = GetLocalPos(piece.Key);
             var up = position + Vector3.up;
             if (IsEmpty(up)) {
                 return GetIndex(up);

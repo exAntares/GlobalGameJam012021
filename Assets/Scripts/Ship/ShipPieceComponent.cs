@@ -5,7 +5,7 @@ public class ShipPieceComponent : MonoBehaviour, IPointerClickHandler, IPointerD
     protected bool IsAttached = false;
     
     private void OnDestroy() {
-        OnDeattached();
+        OnDetached();
     }
 
     public virtual void OnClicked() {
@@ -21,7 +21,7 @@ public class ShipPieceComponent : MonoBehaviour, IPointerClickHandler, IPointerD
         IsAttached = true;
     }
 
-    public virtual void OnDeattached() {
+    public virtual void OnDetached() {
         Debug.Log($"{name} OnDeattached");
         IsAttached = false;
     }
