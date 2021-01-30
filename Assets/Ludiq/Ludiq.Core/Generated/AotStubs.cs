@@ -28,6 +28,9 @@ namespace Ludiq.Generated.Aot
 	// Bolt.StateMacro.op_Equality
 	// Bolt.StateMacro.op_Implicit
 	// Bolt.StateMacro.op_Inequality
+	// Camera.ZoomInOutOnEvent.op_Equality
+	// Camera.ZoomInOutOnEvent.op_Implicit
+	// Camera.ZoomInOutOnEvent.op_Inequality
 	// EnemyComponent.op_Equality
 	// EnemyComponent.op_Implicit
 	// EnemyComponent.op_Inequality
@@ -37,6 +40,7 @@ namespace Ludiq.Generated.Aot
 	// float.op_Inequality
 	// float.op_LessThan
 	// float.op_LessThanOrEqual
+	// float.ToString
 	// GridEntity.op_Equality
 	// GridEntity.op_Implicit
 	// GridEntity.op_Inequality
@@ -120,6 +124,9 @@ namespace Ludiq.Generated.Aot
 	// Ship.SailPieceComponent.op_Equality
 	// Ship.SailPieceComponent.op_Implicit
 	// Ship.SailPieceComponent.op_Inequality
+	// Ship.TreasurePieceComponent.op_Equality
+	// Ship.TreasurePieceComponent.op_Implicit
+	// Ship.TreasurePieceComponent.op_Inequality
 	// ShipPieceComponent.op_Equality
 	// ShipPieceComponent.op_Implicit
 	// ShipPieceComponent.op_Inequality
@@ -717,6 +724,7 @@ namespace Ludiq.Generated.Aot
 	// UnityEngine.UI.Text.op_Equality
 	// UnityEngine.UI.Text.op_Implicit
 	// UnityEngine.UI.Text.op_Inequality
+	// UnityEngine.UI.Text.text
 	// UnityEngine.UI.Toggle.op_Equality
 	// UnityEngine.UI.Toggle.op_Implicit
 	// UnityEngine.UI.Toggle.op_Inequality
@@ -967,6 +975,41 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// Camera.ZoomInOutOnEvent.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Camera_ZoomInOutOnEvent_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Camera.ZoomInOutOnEvent.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Camera_ZoomInOutOnEvent_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Camera.ZoomInOutOnEvent.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Camera_ZoomInOutOnEvent_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// EnemyComponent.op_Equality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void EnemyComponent_op_Equality()
@@ -1071,6 +1114,17 @@ namespace Ludiq.Generated.Aot
 			bool @operator = (arg0 <= arg1);
 			global::Ludiq.StaticFunctionInvoker<float, float, bool> optimized = new global::Ludiq.StaticFunctionInvoker<float, float, bool>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// float.ToString
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void float_ToString()
+		{
+			float target = default(float);
+			target.ToString();
+			global::Ludiq.ReflectionInvoker optimized = new global::Ludiq.ReflectionInvoker(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(float));
 			optimized.Invoke(default(object[]));
 		}
 		
@@ -2029,6 +2083,41 @@ namespace Ludiq.Generated.Aot
 		// Ship.SailPieceComponent.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void Ship_SailPieceComponent_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Ship.TreasurePieceComponent.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Ship_TreasurePieceComponent_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Ship.TreasurePieceComponent.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Ship_TreasurePieceComponent_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Ship.TreasurePieceComponent.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Ship_TreasurePieceComponent_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -9001,6 +9090,18 @@ namespace Ludiq.Generated.Aot
 			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(null, arg0, arg1);
 			optimized.Invoke(default(object[]));
+		}
+		
+		// UnityEngine.UI.Text.text
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_UI_Text_text()
+		{
+			global::UnityEngine.UI.Text target = default(global::UnityEngine.UI.Text);
+			string accessor = target.text;
+			target.text = default(string);
+			global::Ludiq.InstancePropertyAccessor<UnityEngine.UI.Text, string> optimized = new global::Ludiq.InstancePropertyAccessor<UnityEngine.UI.Text, string>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(default(global::UnityEngine.UI.Text));
+			optimized.SetValue(default(global::UnityEngine.UI.Text), default(string));
 		}
 		
 		// UnityEngine.UI.Toggle.op_Equality
