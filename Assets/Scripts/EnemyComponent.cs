@@ -7,8 +7,9 @@ public class EnemyComponent : MonoBehaviour {
     [SerializeField] private GameObject _projectile;
     [SerializeField] private GlobalFloat _currentTurnGlobalFloat;
     [SerializeField] private int _turnFrequencyToAttack = 3;
+    [SerializeField] private int _hitPoints = 3;
 
-    void Start() {
+    private void Start() {
         _currentTurnGlobalFloat.OnTValueChanged += OnTurnChanged;
     }
 

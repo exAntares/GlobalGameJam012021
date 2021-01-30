@@ -196,10 +196,36 @@ MonoBehaviour:
   IsAttached: 0
   OnAttachedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 78b9aca1e98cb48a587924aa22cd1a04, type: 2}
+        m_TargetAssemblyTypeName: HalfBlind.ScriptableVariables.ScriptableGameEvent,
+          halfblind.scriptablevariables
+        m_MethodName: SendEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDetachedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 50615f3f5f5644c489b24b793ef7a581, type: 2}
+        m_TargetAssemblyTypeName: HalfBlind.ScriptableVariables.ScriptableGameEvent,
+          halfblind.scriptablevariables
+        m_MethodName: SendEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnClickedEvent:
     m_PersistentCalls:
       m_Calls: []

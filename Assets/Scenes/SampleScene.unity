@@ -1318,6 +1318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514990715}
   - component: {fileID: 1514990714}
+  - component: {fileID: 1514990716}
   m_Layer: 0
   m_Name: BoatFixedCamera
   m_TagString: Untagged
@@ -1375,6 +1376,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514990716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514990713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f330fa719b04760a22b589bcb0ae1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _zoomInOnEvent: {fileID: 11400000, guid: 50615f3f5f5644c489b24b793ef7a581, type: 2}
+  _zoomOutOnEvent: {fileID: 11400000, guid: 78b9aca1e98cb48a587924aa22cd1a04, type: 2}
+  _zoomPerEvent: 0.1
+  _zoomDuration: 0.2
+  _camera: {fileID: 1514990714}
 --- !u!4 &1521370767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6293462589315418146, guid: 49c8b809caef34bc892bacfcbe67f768, type: 3}
