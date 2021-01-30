@@ -117,10 +117,10 @@ RectTransform:
   m_Father: {fileID: 1324878373908672301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 799, y: -571}
-  m_SizeDelta: {x: 722.6561, y: 112.7793}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -460, y: 157}
+  m_SizeDelta: {x: 660, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2067398974679430441
 CanvasRenderer:
@@ -516,8 +516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59, y: 431.12988}
-  m_SizeDelta: {x: 2028.5443, y: 444.0884}
+  m_AnchoredPosition: {x: 21.1525, y: 313.1521}
+  m_SizeDelta: {x: 1680.1372, y: 208.1328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8442419163936050423
 CanvasRenderer:
@@ -549,7 +549,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 89dbb3577fc28b54e9bd766bfafe805f, type: 3}
-    m_FontSize: 250
+    m_FontSize: 190
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -560,7 +560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.6
-  m_Text: "<size=150>Catptain</size>\n Catmiral"
+  m_Text: "ConCatulations \n\n"
 --- !u!1 &6663107041604280751
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,8 +694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137.5, y: -341}
-  m_SizeDelta: {x: 1871.5505, y: 264.035}
+  m_AnchoredPosition: {x: 21.156, y: -172.45956}
+  m_SizeDelta: {x: 1680.1, y: 238.9159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7869724490901920927
 GameObject:
@@ -733,8 +733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000045776, y: -0.000015259}
-  m_SizeDelta: {x: 1326.948, y: 308.1423}
+  m_AnchoredPosition: {x: -0.000045776, y: 90.6}
+  m_SizeDelta: {x: 1326.948, y: 236.9716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5178832111032771637
 MonoBehaviour:
