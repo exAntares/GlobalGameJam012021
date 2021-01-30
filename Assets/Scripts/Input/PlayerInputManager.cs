@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
+using YamlDotNet.Core.Tokens;
 
 public class PlayerInputManager : MonoBehaviour
 { 
+    public void setMousePos( Vector3 value ) {
+        mousePos = value;
+    }
     public GameObject playerShipGameObject;
-    public GameObject gameGridGameObject;
+    public Grid gameGrid;
     private GameObject ghostShipContainer;
     private PlayerInputType currentInputType;
     // Start is called before the first frame update
 
+    private Vector3 mousePos;
     public void Init() {
         currentInputType = PlayerInputType.CONTROL_PENDING;
         ghostShipContainer = new GameObject();
-        ghostShipContainer.transform.parent = gameGridGameObject.transform;
+        ghostShipContainer.transform.parent = gameGrid.transform;
     }
 
     public void Reset() {
@@ -94,7 +98,7 @@ public class PlayerInputManager : MonoBehaviour
             newSpr.transform.Translate(spr.transform.parent.position);
         }
         
-        ghostShipContainer.transform.parent = gameGridGameObject.transform;
+        ghostShipContainer.transform.parent = gameGrid.transform;
     }
 
     private void cancelMoveRaft() {
@@ -103,7 +107,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private void updateGhostPreviews() {
         if(currentInputType == PlayerInputType.RAFT_MOVEMENT) {
-            
+            ghostShipContainer.transform.position = mousePos;
         }
     }
 }
