@@ -16,7 +16,10 @@ namespace Tooltips
         public void OnPointerExit(PointerEventData eventData)
         {
             var tooltipManager = TooltipManager.Find();
-            tooltipManager.HideTooltip(transform);
+            if (tooltipManager != null)
+            {
+                tooltipManager.HideTooltip(transform);
+            }
         }
     }
 }

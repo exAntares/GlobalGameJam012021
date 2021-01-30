@@ -471,7 +471,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b33875069aca5401799c8062d46b0348, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -603,6 +603,10 @@ PrefabInstance:
     - target: {fileID: 426610122496388277, guid: f85e175af9201f54ba21afd2e8a06459, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483856030579003205, guid: f85e175af9201f54ba21afd2e8a06459, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.091308594
       objectReference: {fileID: 0}
     - target: {fileID: 5208357105814353882, guid: f85e175af9201f54ba21afd2e8a06459, type: 3}
       propertyPath: m_RootOrder
