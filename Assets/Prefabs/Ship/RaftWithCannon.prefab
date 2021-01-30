@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3084011637542500396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748831000199199833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce229e17e984b21bd07ab4860f1b3df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shipPiece: {fileID: 6748831000199199832}
+  _tooltipSpawner: {fileID: 6323660181739381543}
+  _tooltipTextWhenDetached: Tap to attach to your boat and increase damage
+  _tooltipTextWhenAttached: Tap to shoot an enemy
 --- !u!1001 &1504272225170273050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +25,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5280635042534969155, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: RaftWithCannon
       objectReference: {fileID: 0}
     - target: {fileID: 5280635042534969158, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
       propertyPath: m_RootOrder
@@ -57,3 +73,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+--- !u!1 &6748831000199199833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5280635042534969155, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+  m_PrefabInstance: {fileID: 1504272225170273050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6748831000199199832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5280635042534969154, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+  m_PrefabInstance: {fileID: 1504272225170273050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748831000199199833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441f8021c861482096fae40eeed3370a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6323660181739381543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4837456369728163901, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+  m_PrefabInstance: {fileID: 1504272225170273050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748831000199199833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383484e5866249eda82be7546f0fc441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

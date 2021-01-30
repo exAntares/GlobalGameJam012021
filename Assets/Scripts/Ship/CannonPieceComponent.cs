@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Ship
 {
     [RequireComponent(typeof(ShipPieceComponent)), RequireComponent(typeof(TooltipSpawner))]
-    public class SailPieceComponent : MonoBehaviour
+    public class CannonPieceComponent : MonoBehaviour
     {
         [SerializeField] private ShipPieceComponent _shipPiece;
         [SerializeField] private TooltipSpawner _tooltipSpawner;
@@ -62,7 +62,7 @@ namespace Ship
         private void OnClicked()
         {
             var turnManager = TurnManager.Find();
-            // TODO: Move everything else a bit further
+            // TODO: Select enemy to shoot
             turnManager.PassTurn();
         }
 
