@@ -235,6 +235,8 @@ MonoBehaviour:
   _toSpawn:
   - Weight: 10
     ToSpawn: {fileID: 5280635042534969158, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+  - Weight: 2
+    ToSpawn: {fileID: 6748831000199199836, guid: fed9d49aa1b5a1947bc2e725942439f8, type: 3}
   - Weight: 1
     ToSpawn: {fileID: 6748831000199199836, guid: f4071b5f264fa42bea783e56e59dceef, type: 3}
   - Weight: 1

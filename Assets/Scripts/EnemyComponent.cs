@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using HalfBlind.ScriptableVariables;
+using Ship;
 using UnityEngine;
 
 public class EnemyComponent : MonoBehaviour {
@@ -28,12 +30,22 @@ public class EnemyComponent : MonoBehaviour {
     private void AttackPlayer() {
         var mainShip = FindObjectOfType<MainShipComponent>();
         var shipPieceComponents = new List<ShipPieceComponent>(mainShip.PiecesByIndex.Values);
-        var index = Random.Range(0, shipPieceComponents.Count);
-        var target = shipPieceComponents[index].gameObject;
-        if (target != null)
-        {
-            Debug.Log($"{name} attacking {target}");
-            DestroyShip(target);
+        var targetRaftComponent = shipPieceComponents
+            .FirstOrDefault(x => x.GetComponent<TargetRaftComponent>() != null);
+        if (targetRaftComponent != null) {
+            DestroyShip(targetRaftComponent.gameObject);
+            return;
+        }
+
+        shipPieceComponents = shipPieceComponents.Where(x => x.transform.localPosition != Vector3.zero).ToList();
+        if (shipPieceComponents.Count > 0) {
+            var index = Random.Range(0, shipPieceComponents.Count);
+            var target = shipPieceComponents[index].gameObject;
+            if (target != null)
+            {
+                Debug.Log($"{name} attacking {target}");
+                DestroyShip(target);
+            }            
         }
     }
 
