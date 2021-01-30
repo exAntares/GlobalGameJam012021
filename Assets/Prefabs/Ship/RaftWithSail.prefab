@@ -1,6 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &630391548209474905
+--- !u!114 &8749918336053710364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748831000199199833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b723a05977dd4cdcb9f2ea964baffc75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shipPiece: {fileID: 6748831000199199832}
+  _tooltipSpawner: {fileID: 6323660181739381543}
+  _tooltipTextWhenDetached: Tap to attach this sail to your boat
+  _tooltipTextWhenAttached: Tap to end turn and move further
+--- !u!1 &5276330384402371432
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +24,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8449684656806622305}
-  - component: {fileID: 2703072599513221689}
+  - component: {fileID: 8351560676992456102}
+  - component: {fileID: 8300015758154327365}
   m_Layer: 0
-  m_Name: RaftSail
+  m_Name: Sail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8449684656806622305
+--- !u!4 &8351560676992456102
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630391548209474905}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0887, y: 0.4212, z: 0}
-  m_LocalScale: {x: 0.5319043, y: 0.6267732, z: 0.8141645}
+  m_GameObject: {fileID: 5276330384402371432}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 6748831000199199836}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2703072599513221689
+--- !u!212 &8300015758154327365
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630391548209474905}
+  m_GameObject: {fileID: 5276330384402371432}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,7 +86,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 089dcfe55f4e7bd42b53470e4afef174, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,22 +98,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8749918336053710364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6748831000199199833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b723a05977dd4cdcb9f2ea964baffc75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shipPiece: {fileID: 6748831000199199832}
-  _tooltipSpawner: {fileID: 6323660181739381543}
-  _tooltipTextWhenDetached: Tap to attach this sail to your boat
-  _tooltipTextWhenAttached: Tap to end turn and move further
 --- !u!1001 &1504272225170273050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,8 +105,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3463587038030022630, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5125431836584662572, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280635042534969152, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5280635042534969155, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}

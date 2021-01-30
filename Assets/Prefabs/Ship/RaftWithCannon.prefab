@@ -16,7 +16,7 @@ MonoBehaviour:
   _tooltipSpawner: {fileID: 6323660181739381543}
   _tooltipTextWhenDetached: Tap to add more cannons to your ship
   _tooltipTextWhenAttached: Tap to shoot an enemy this turn
---- !u!1 &3365755335915471037
+--- !u!1 &5430448299660794881
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,36 +24,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 631619221502393677}
-  - component: {fileID: 6973798795118249539}
+  - component: {fileID: 8328580708508574913}
+  - component: {fileID: 4052561252914086446}
   m_Layer: 0
-  m_Name: RaftCannon
+  m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &631619221502393677
+--- !u!4 &8328580708508574913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3365755335915471037}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 0.033, z: 0}
-  m_LocalScale: {x: 0.5228219, y: 0.6707531, z: 1.0752226}
+  m_GameObject: {fileID: 5430448299660794881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 6748831000199199836}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6973798795118249539
+--- !u!212 &4052561252914086446
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3365755335915471037}
+  m_GameObject: {fileID: 5430448299660794881}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9, y: 1.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -107,6 +107,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5125431836584662572, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280635042534969152, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5280635042534969155, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
