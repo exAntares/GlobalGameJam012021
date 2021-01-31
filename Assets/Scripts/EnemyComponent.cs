@@ -18,6 +18,7 @@ public class EnemyComponent : MonoBehaviour {
     [SerializeField] private ScriptableGameEvent _sendWhenHit;
     [SerializeField] private Animator _animator;
     private static readonly int Attack = Animator.StringToHash("Attack");
+    private static readonly int Dead = Animator.StringToHash("Dead");
 
     public int HitPoints => _hitPoints;
 
@@ -43,7 +44,7 @@ public class EnemyComponent : MonoBehaviour {
         var targetRaftComponent = shipPieceComponents
             .FirstOrDefault(x => x.GetComponent<TargetRaftComponent>() != null);
         if (targetRaftComponent != null) {
-            DestroyShip(targetRaftComponent.gameObject);
+            DestroyShip(targetRaftComponent.gameObject).Forget();
             return;
         }
 
@@ -59,37 +60,44 @@ public class EnemyComponent : MonoBehaviour {
         }
     }
 
-    public void ReceiveDamage(int damage)
-    {
+    public void ReceiveDamage(int damage) {
         _hitPoints -= damage;
-        if (_hitPoints < 0)
-        {
+        if (_hitPoints == 0) {
             var allComponents = gameObject.GetComponents<MonoBehaviour>();
-            foreach (var monoBehaviour in allComponents)
-            {
+            foreach (var monoBehaviour in allComponents) {
                 // Stop moving or accepting things from this enemy
                 monoBehaviour.enabled = false;
             }
 
-            transform.DOScale(Vector3.zero, 0.3f).OnComplete(() =>
-            {
-                if (gameObject != null)
-                {
-                    if (_sendWhenKilled != null)
-                    {
-                        _sendWhenKilled.SendEvent();
-                    }
-                    Destroy(gameObject);
-                }
-            });
+            PlayAnimationAndDie().Forget();
         }
-        else
-        {
-            if (_sendWhenHit != null)
-            {
+        else if(_hitPoints > 0) {
+            if (_sendWhenHit != null) {
                 _sendWhenHit.SendEvent();
             }
         }
+    }
+
+    private async UniTaskVoid PlayAnimationAndDie() {
+        const float animDuration = 0.45f;
+        Debug.Log($"PlayAnimationAndDie {name} {Time.realtimeSinceStartup}");
+
+        if (_animator != null) {
+            _animator.SetTrigger(Dead);
+        }
+        else {
+            transform.DOScale(Vector3.zero, animDuration);
+        }
+        
+        // replacement of yield return new WaitForSeconds/WaitForSecondsRealtime
+        await UniTask.Delay(TimeSpan.FromSeconds(animDuration))
+            .WithCancellation(this.GetCancellationTokenOnDestroy());
+        
+        if (_sendWhenKilled != null) {
+            _sendWhenKilled.SendEvent();
+        }
+
+        Destroy(gameObject);
     }
 
     private async UniTaskVoid DestroyShip(GameObject target) {
