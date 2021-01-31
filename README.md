@@ -31,6 +31,7 @@ Requires mouse to play.
  - Irina
  - Niklas
  - Nico
+
 We thank you for setting up the event and for joining us. The complexities of building a game in such a short time all in remote can make things even harder than a regular game jam. We are still very grateful for your contributions and hope to see you in more of these!
 
 # Technologies
