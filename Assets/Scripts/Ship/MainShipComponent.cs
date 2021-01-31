@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using DG.Tweening;
+using HalfBlind.ScriptableVariables;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.U2D;
 
 public class MainShipComponent : MonoBehaviour {
+    [SerializeField] private GlobalFloat _treasuresOwn;
+    
     public SpriteShapeController ShapeController;
     
     public const int maxX = 100;
@@ -13,7 +15,11 @@ public class MainShipComponent : MonoBehaviour {
     public Dictionary<int, ShipPieceComponent> PiecesByIndex = new Dictionary<int, ShipPieceComponent>();
     private Transform _lastPiece;
     
-    private void Awake() => AddPiece(GetComponentInChildren<ShipPieceComponent>());
+    private void Awake() {
+        // reset treasures count when starting the game
+        _treasuresOwn.Value = 0;
+        AddPiece(GetComponentInChildren<ShipPieceComponent>());
+    }
 
     public int GetIndex(Vector3 localPos) {
         var offsetPos = localPos + Offset;

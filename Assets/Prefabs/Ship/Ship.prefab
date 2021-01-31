@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b770f2f40c894cdfb987614115abeea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _treasuresOwn: {fileID: 11400000, guid: 852d20839b4bdbd4e8be5762a248f089, type: 2}
   ShapeController: {fileID: 9081520300670504395}
 --- !u!54 &2627986362277515804
 Rigidbody:
