@@ -28,9 +28,18 @@ namespace Ludiq.Generated.Aot
 	// Bolt.StateMacro.op_Equality
 	// Bolt.StateMacro.op_Implicit
 	// Bolt.StateMacro.op_Inequality
-	// Camera.ZoomInOutOnEvent.op_Equality
-	// Camera.ZoomInOutOnEvent.op_Implicit
-	// Camera.ZoomInOutOnEvent.op_Inequality
+	// CFX_AutoDestructShuriken.op_Equality
+	// CFX_AutoDestructShuriken.op_Implicit
+	// CFX_AutoDestructShuriken.op_Inequality
+	// CFX_AutoRotate.op_Equality
+	// CFX_AutoRotate.op_Implicit
+	// CFX_AutoRotate.op_Inequality
+	// CFX_LightFlicker.op_Equality
+	// CFX_LightFlicker.op_Implicit
+	// CFX_LightFlicker.op_Inequality
+	// CFX_LightIntensityFade.op_Equality
+	// CFX_LightIntensityFade.op_Implicit
+	// CFX_LightIntensityFade.op_Inequality
 	// EnemyComponent.op_Equality
 	// EnemyComponent.op_Implicit
 	// EnemyComponent.op_Inequality
@@ -41,6 +50,9 @@ namespace Ludiq.Generated.Aot
 	// float.op_LessThan
 	// float.op_LessThanOrEqual
 	// float.ToString
+	// GameCamera.ZoomInOutOnEvent.op_Equality
+	// GameCamera.ZoomInOutOnEvent.op_Implicit
+	// GameCamera.ZoomInOutOnEvent.op_Inequality
 	// GridEntity.op_Equality
 	// GridEntity.op_Implicit
 	// GridEntity.op_Inequality
@@ -140,6 +152,12 @@ namespace Ludiq.Generated.Aot
 	// ShipPieceComponent.op_Equality
 	// ShipPieceComponent.op_Implicit
 	// ShipPieceComponent.op_Inequality
+	// Sounds.PlaySound.op_Equality
+	// Sounds.PlaySound.op_Implicit
+	// Sounds.PlaySound.op_Inequality
+	// Sounds.RunOnEvent.op_Equality
+	// Sounds.RunOnEvent.op_Implicit
+	// Sounds.RunOnEvent.op_Inequality
 	// string.op_Equality
 	// string.op_Inequality
 	// Tooltips.TooltipManager.op_Equality
@@ -151,6 +169,9 @@ namespace Ludiq.Generated.Aot
 	// TransformSpawner.op_Equality
 	// TransformSpawner.op_Implicit
 	// TransformSpawner.op_Inequality
+	// TransformSpawnerOnTurn.op_Equality
+	// TransformSpawnerOnTurn.op_Implicit
+	// TransformSpawnerOnTurn.op_Inequality
 	// TurnManagement.TurnManager.op_Equality
 	// TurnManagement.TurnManager.op_Implicit
 	// TurnManagement.TurnManager.op_Inequality
@@ -988,9 +1009,9 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// Camera.ZoomInOutOnEvent.op_Equality
+		// CFX_AutoDestructShuriken.op_Equality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Camera_ZoomInOutOnEvent_op_Equality()
+		public static void CFX_AutoDestructShuriken_op_Equality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -1000,9 +1021,9 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// Camera.ZoomInOutOnEvent.op_Implicit
+		// CFX_AutoDestructShuriken.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Camera_ZoomInOutOnEvent_op_Implicit()
+		public static void CFX_AutoDestructShuriken_op_Implicit()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			bool conversion = ((bool)(arg0));
@@ -1011,9 +1032,114 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// Camera.ZoomInOutOnEvent.op_Inequality
+		// CFX_AutoDestructShuriken.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Camera_ZoomInOutOnEvent_op_Inequality()
+		public static void CFX_AutoDestructShuriken_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_AutoRotate.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_AutoRotate_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_AutoRotate.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_AutoRotate_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_AutoRotate.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_AutoRotate_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_LightFlicker.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_LightFlicker_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_LightFlicker.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_LightFlicker_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_LightFlicker.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_LightFlicker_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_LightIntensityFade.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_LightIntensityFade_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_LightIntensityFade.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_LightIntensityFade_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CFX_LightIntensityFade.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CFX_LightIntensityFade_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -1138,6 +1264,41 @@ namespace Ludiq.Generated.Aot
 			target.ToString();
 			global::Ludiq.ReflectionInvoker optimized = new global::Ludiq.ReflectionInvoker(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(default(float));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameCamera.ZoomInOutOnEvent.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameCamera_ZoomInOutOnEvent_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameCamera.ZoomInOutOnEvent.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameCamera_ZoomInOutOnEvent_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameCamera.ZoomInOutOnEvent.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameCamera_ZoomInOutOnEvent_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
 			optimized.Invoke(default(object[]));
 		}
 		
@@ -2291,6 +2452,76 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// Sounds.PlaySound.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Sounds_PlaySound_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Sounds.PlaySound.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Sounds_PlaySound_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Sounds.PlaySound.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Sounds_PlaySound_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Sounds.RunOnEvent.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Sounds_RunOnEvent_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Sounds.RunOnEvent.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Sounds_RunOnEvent_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// Sounds.RunOnEvent.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void Sounds_RunOnEvent_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// string.op_Equality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void string_op_Equality()
@@ -2411,6 +2642,41 @@ namespace Ludiq.Generated.Aot
 		// TransformSpawner.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void TransformSpawner_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// TransformSpawnerOnTurn.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void TransformSpawnerOnTurn_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// TransformSpawnerOnTurn.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void TransformSpawnerOnTurn_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// TransformSpawnerOnTurn.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void TransformSpawnerOnTurn_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);

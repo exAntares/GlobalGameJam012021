@@ -164,6 +164,7 @@ MonoBehaviour:
   _sendWhenKilled: {fileID: 11400000, guid: 6f8169499e9964397a3ab48e25be34fd, type: 2}
   _sendWhenDestroyBoat: {fileID: 11400000, guid: b26a30970333d4e6ab1809ffd09f8a8f, type: 2}
   _sendWhenHit: {fileID: 11400000, guid: fbf6b0bc762d3480daf852c73a1c97aa, type: 2}
+  _animator: {fileID: 2562098172840352333}
 --- !u!1001 &6205054762600494150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,5 +325,10 @@ PrefabInstance:
 --- !u!4 &1541214898357374735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4863806948870749001, guid: 2da6f61f277634a4b8c839ba6bfdff42, type: 3}
+  m_PrefabInstance: {fileID: 6205054762600494150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2562098172840352333 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8472026095656791563, guid: 2da6f61f277634a4b8c839ba6bfdff42, type: 3}
   m_PrefabInstance: {fileID: 6205054762600494150}
   m_PrefabAsset: {fileID: 0}
