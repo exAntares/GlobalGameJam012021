@@ -20,5 +20,18 @@ You are the last member of your crew. The last battles have left your ship in a 
 
 Requires mouse to play.
 
+# Team
+ - Andy Michael ([GustoGaiden - GitHub](https://github.com/GustoGaiden))
+ - Berta Laurin ([Berta Laurin - Artstation](https://berta_laurin.artstation.com/))
+ - Luis Rojas ([exAntares - GitHub](https://github.com/exAntares))
+ - Oriana Laplana ([cegata - Facebook](https://www.facebook.com/cegata/))
+ - Sergio R. Lumley ([lumley - GitHub](https://github.com/lumley/))
+
+## Special thanks
+ - Irina
+ - Niklas
+ - Nico
+We thank you for setting up the event and for joining us. The complexities of building a game in such a short time all in remote can make things even harder than a regular game jam. We are still very grateful for your contributions and hope to see you in more of these!
+
 # Technologies
 [Unity 2020.2.2f1](https://unity3d.com/get-unity/download/archive)
