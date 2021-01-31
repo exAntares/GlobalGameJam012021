@@ -352,7 +352,7 @@ MonoBehaviour:
   _sendWhenKilled: {fileID: 11400000, guid: 12de05d259bc84f9c935d81d3d12603c, type: 2}
   _sendWhenDestroyBoat: {fileID: 11400000, guid: b26a30970333d4e6ab1809ffd09f8a8f, type: 2}
   _sendWhenHit: {fileID: 11400000, guid: 99f2251d288f04605be175bb2c9562c4, type: 2}
-  _animator: {fileID: 0}
+  _animator: {fileID: 8546268995066446529}
 --- !u!1001 &1030844051227788438
 PrefabInstance:
   m_ObjectHideFlags: 0
