@@ -235,6 +235,8 @@ MonoBehaviour:
   _toSpawn:
   - Weight: 1
     ToSpawn: {fileID: 8757640359101648197, guid: 7c776e468aa644d8b877c0ed174f78e5, type: 3}
+  - Weight: 2
+    ToSpawn: {fileID: 8757640359101648197, guid: 429019cdfb31d40119c2710cdb293f9c, type: 3}
   _spots:
   - {fileID: 1807796860610666335}
   - {fileID: 6766172144153346163}
@@ -246,7 +248,8 @@ MonoBehaviour:
   - {fileID: 6831478236450494794}
   - {fileID: 7338743939560180355}
   _currentTurn: {fileID: 11400000, guid: 88e87e51df7f44355af1afa93b50d376, type: 2}
-  _everyXTurns: 7
+  _everyXTurns: 5
+  _shouldSpawnRotatedRandom: 0
 --- !u!1 &5740299658446956054
 GameObject:
   m_ObjectHideFlags: 0
