@@ -3,7 +3,7 @@ using DG.Tweening;
 using HalfBlind.ScriptableVariables;
 using UnityEngine;
 
-namespace Camera
+namespace GameCamera
 {
     [RequireComponent(typeof(CinemachineVirtualCamera))]
     public class ZoomInOutOnEvent : MonoBehaviour
