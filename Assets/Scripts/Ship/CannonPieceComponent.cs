@@ -1,3 +1,4 @@
+using System.Linq;
 using DG.Tweening;
 using HalfBlind.ScriptableVariables;
 using Tooltips;
@@ -83,11 +84,15 @@ namespace Ship
             }
         }
 
-        private void ShootAtRandom(EnemyComponent[] enemies)
-        {
-            var enemiesLength = enemies.Length;
+        private void ShootAtRandom(EnemyComponent[] enemies) {
+            var enemyComponents = enemies.Where(x => x.HitPoints > 0).ToArray();
+            if (enemyComponents.Length <= 0) {
+                return;
+            }
+            
+            var enemiesLength = enemyComponents.Length;
             var range = Random.Range(0, enemiesLength);
-            var enemy = enemies[range];
+            var enemy = enemyComponents[range];
 
             var instance = Instantiate(_projectile);
             instance.transform.position = transform.position;
