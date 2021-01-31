@@ -116,6 +116,6 @@ MonoBehaviour:
   _currentTurnGlobalFloat: {fileID: 11400000, guid: 88e87e51df7f44355af1afa93b50d376, type: 2}
   _turnFrequencyToAttack: 1
   _hitPoints: 3
-  _sendWhenKilled: {fileID: 11400000, guid: 6f8169499e9964397a3ab48e25be34fd, type: 2}
+  _sendWhenKilled: {fileID: 11400000, guid: 12de05d259bc84f9c935d81d3d12603c, type: 2}
   _sendWhenDestroyBoat: {fileID: 11400000, guid: b26a30970333d4e6ab1809ffd09f8a8f, type: 2}
-  _sendWhenHit: {fileID: 11400000, guid: fbf6b0bc762d3480daf852c73a1c97aa, type: 2}
+  _sendWhenHit: {fileID: 11400000, guid: 99f2251d288f04605be175bb2c9562c4, type: 2}
