@@ -7,6 +7,7 @@ public class PlayerInputManager : MonoBehaviour
     }
     public GameObject playerShipGameObject;
     public Grid gameGrid;
+    public GameObject ClickCatcher;
     private GameObject ghostShipContainer;
     private PlayerInputType currentInputType;
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class PlayerInputManager : MonoBehaviour
         currentInputType = PlayerInputType.CONTROL_PENDING;
         ghostShipContainer = new GameObject();
         ghostShipContainer.transform.parent = gameGrid.transform;
+        ClickCatcher.SetActive(false);
     }
 
     public void Reset() {
@@ -81,6 +83,7 @@ public class PlayerInputManager : MonoBehaviour
 
 
     private void startControlMoveRaft() {
+        ClickCatcher.SetActive(true);
         currentInputType = PlayerInputType.RAFT_MOVEMENT;
         createGhostBoat();
     }
@@ -100,11 +103,13 @@ public class PlayerInputManager : MonoBehaviour
 
     private void cancelMoveRaft() {
         Destroy(ghostShipContainer);
+        ClickCatcher.SetActive(false);
     }
 
     private void updateGhostPreviews() {
         if(currentInputType == PlayerInputType.RAFT_MOVEMENT) {
-            ghostShipContainer.transform.position = mousePos;
+            Vector3 gridPos = new Vector3(Mathf.Round(mousePos.x),Mathf.Round(mousePos.y),Mathf.Round(mousePos.z));
+            ghostShipContainer.transform.position = gridPos;
         }
     }
 }
