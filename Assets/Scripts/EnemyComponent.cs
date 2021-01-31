@@ -10,6 +10,9 @@ public class EnemyComponent : MonoBehaviour {
     [SerializeField] private GlobalFloat _currentTurnGlobalFloat;
     [SerializeField] private int _turnFrequencyToAttack = 3;
     [SerializeField] private int _hitPoints = 3;
+    [SerializeField] private ScriptableGameEvent _sendWhenKilled;
+    [SerializeField] private ScriptableGameEvent _sendWhenDestroyBoat;
+    [SerializeField] private ScriptableGameEvent _sendWhenHit;
 
     private void Start() {
         _currentTurnGlobalFloat.OnTValueChanged += OnTurnChanged;
@@ -61,7 +64,24 @@ public class EnemyComponent : MonoBehaviour {
                 monoBehaviour.enabled = false;
             }
 
-            transform.DOScale(Vector3.zero, 0.3f).OnComplete(() => Destroy(gameObject));
+            transform.DOScale(Vector3.zero, 0.3f).OnComplete(() =>
+            {
+                if (gameObject != null)
+                {
+                    if (_sendWhenKilled != null)
+                    {
+                        _sendWhenKilled.SendEvent();
+                    }
+                    Destroy(gameObject);
+                }
+            });
+        }
+        else
+        {
+            if (_sendWhenHit != null)
+            {
+                _sendWhenHit.SendEvent();
+            }
         }
     }
 
@@ -77,6 +97,11 @@ public class EnemyComponent : MonoBehaviour {
             Destroy(instance);
             if (target != null)
             {
+                if (_sendWhenDestroyBoat != null)
+                {
+                    _sendWhenDestroyBoat.SendEvent();
+                }
+
                 Destroy(target);
             }
         });
