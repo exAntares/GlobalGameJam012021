@@ -481,7 +481,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatTainCharacter
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4934038441846238257, guid: f32fc0b0d310ffb4491a148e30c6b075, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f32fc0b0d310ffb4491a148e30c6b075, type: 3}
 --- !u!4 &5518593150094048837 stripped
 Transform:
