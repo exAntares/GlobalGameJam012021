@@ -190,7 +190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -308.5453, y: 0}
+  m_AnchoredPosition: {x: -308.54492, y: 0}
   m_SizeDelta: {x: 617.0906, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3785785039092471319
@@ -669,14 +669,14 @@ RectTransform:
   m_GameObject: {fileID: 6668407770317920212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.347889, y: 2.347889, z: 2.347889}
   m_Children: []
   m_Father: {fileID: 4523579042830671816}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9.881836}
+  m_AnchoredPosition: {x: -82, y: 34}
   m_SizeDelta: {x: 120.592896, y: 105.0074}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &9075470022189177915
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b891d5695e5fe7c4285138c091ea014c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dfc665fa8ae3cee4384c994dac4ed5ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1405,13 +1405,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
---- !u!1 &4180602166963776755 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
-  m_PrefabInstance: {fileID: 8292319467374999831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7065106420215381722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1231857942789457869, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
+  m_PrefabInstance: {fileID: 8292319467374999831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4180602166963776755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264786148335277540, guid: 787639c7d8c537a48a4165c2dd948b00, type: 3}
   m_PrefabInstance: {fileID: 8292319467374999831}
   m_PrefabAsset: {fileID: 0}

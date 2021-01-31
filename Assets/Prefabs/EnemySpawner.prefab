@@ -237,6 +237,8 @@ MonoBehaviour:
     ToSpawn: {fileID: 8757640359101648197, guid: 7c776e468aa644d8b877c0ed174f78e5, type: 3}
   - Weight: 2
     ToSpawn: {fileID: 8757640359101648197, guid: 429019cdfb31d40119c2710cdb293f9c, type: 3}
+  - Weight: 2
+    ToSpawn: {fileID: 8757640359101648197, guid: b784c4da0ef947a49b1e860bfd8143e2, type: 3}
   _spots:
   - {fileID: 1807796860610666335}
   - {fileID: 6766172144153346163}
