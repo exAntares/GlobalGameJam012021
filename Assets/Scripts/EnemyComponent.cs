@@ -14,6 +14,8 @@ public class EnemyComponent : MonoBehaviour {
     [SerializeField] private ScriptableGameEvent _sendWhenDestroyBoat;
     [SerializeField] private ScriptableGameEvent _sendWhenHit;
 
+    public int HitPoints => _hitPoints;
+
     private void Start() {
         _currentTurnGlobalFloat.OnTValueChanged += OnTurnChanged;
     }
