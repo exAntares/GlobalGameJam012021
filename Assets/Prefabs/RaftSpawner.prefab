@@ -233,11 +233,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toSpawn:
-  - Weight: 9
+  - Weight: 10
     ToSpawn: {fileID: 5280635042534969158, guid: 6d3b01e6c572c40fca67c995d0ede66f, type: 3}
-  - Weight: 2
+  - Weight: 5
     ToSpawn: {fileID: 6748831000199199836, guid: fed9d49aa1b5a1947bc2e725942439f8, type: 3}
-  - Weight: 2
+  - Weight: 4
     ToSpawn: {fileID: 6748831000199199836, guid: f4071b5f264fa42bea783e56e59dceef, type: 3}
   - Weight: 1
     ToSpawn: {fileID: 6748831000199199836, guid: 287c25d0b26ae89469d4b030251721f5, type: 3}
