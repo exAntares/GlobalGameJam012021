@@ -93,32 +93,38 @@ public class EnemyComponent : MonoBehaviour {
     }
 
     private async UniTaskVoid DestroyShip(GameObject target) {
-        _animator.SetTrigger(Attack);
-        Debug.Log($"DestroyShip SetTrigger {Time.realtimeSinceStartup}");
+        if (_animator != null) {
+            _animator.SetTrigger(Attack);
+            Debug.Log($"DestroyShip SetTrigger {Time.realtimeSinceStartup}");
 
-        // replacement of yield return new WaitForSeconds/WaitForSecondsRealtime
-        await UniTask.Delay(TimeSpan.FromSeconds(1.2f))
-            .WithCancellation(this.GetCancellationTokenOnDestroy());
+            // replacement of yield return new WaitForSeconds/WaitForSecondsRealtime
+            await UniTask.Delay(TimeSpan.FromSeconds(1.2f))
+                .WithCancellation(this.GetCancellationTokenOnDestroy());            
+        }
 
         Debug.Log($"DestroyShip Instantiate {Time.realtimeSinceStartup}");
-        var instance = Instantiate(_projectile);
-        instance.transform.position = transform.position;
-        var tweenerCore = instance.transform.DOMove(target.transform.position, 0.5f);
-        tweenerCore.SetDelay(Random.Range(0f, 0.5f));
-        tweenerCore.OnComplete(() => {
-            var hitEffect = Instantiate(_hitEffect);
-            hitEffect.transform.position = instance.transform.position;
-            Destroy(hitEffect, 2.0f);
-            Destroy(instance);
-            if (target != null)
-            {
-                if (_sendWhenDestroyBoat != null)
-                {
-                    _sendWhenDestroyBoat.SendEvent();
-                }
-
-                Destroy(target);
+        if (target != null) {
+            var instance = Instantiate(_projectile);
+            instance.transform.position = transform.position;
+            var tweenerCore = instance.transform.DOMove(target.transform.position, 0.5f);
+            if (_animator == null) {
+                tweenerCore.SetDelay(Random.Range(0.1f, 0.3f));
             }
-        });
+            tweenerCore.OnComplete(() => {
+                var hitEffect = Instantiate(_hitEffect);
+                hitEffect.transform.position = instance.transform.position;
+                Destroy(hitEffect, 2.0f);
+                Destroy(instance);
+                if (target != null)
+                {
+                    if (_sendWhenDestroyBoat != null)
+                    {
+                        _sendWhenDestroyBoat.SendEvent();
+                    }
+
+                    Destroy(target);
+                }
+            });
+        }
     }
 }
