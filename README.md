@@ -6,6 +6,9 @@ Find more info about the entry here https://globalgamejam.org/2021/games/catmira
 **Play right now!**
 https://exantares.github.io/GlobalGameJam012021/
 
+**Or watch a playthrough**
+https://www.youtube.com/watch?v=YsD2QQi6UHQ
+
 # Game and how to play
 
 ![Drift to safety](docs/Images/1_MainMenu.png)
